@@ -11,20 +11,6 @@ const StyledCard = styled(Card)`
   z-index: 100;
   overflow: hidden;
 
-  & header {
-    background: #4f005f;
-    padding: 1rem;
-  }
-
-  & header h2 {
-    margin: 0;
-    color: white;
-  }
-
-  & div {
-    padding: 1rem;
-  }
-
   & footer {
     padding: 1rem;
     display: flex;
@@ -39,18 +25,43 @@ const StyledCard = styled(Card)`
   }
 `;
 
+const StyledHeading = styled.header`
+  background: #4f005f;
+  padding: 1rem;
+
+  & h2 {
+    margin: 0;
+    color: white;
+  }
+`;
+
+const StyledDiv = styled.div`
+  padding: 1rem;
+`;
+
+const BackDrop = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.75);
+`;
+
 function ErrorModel(props) {
   return (
     <div>
+      <BackDrop onClick={props.onBackDrop} />
       <StyledCard>
-        <header>
+        <StyledHeading>
           <h2>{props.heading}</h2>
-        </header>
-        <div>
+        </StyledHeading>
+        <StyledDiv>
           <p>{props.msg}</p>
-        </div>
+        </StyledDiv>
         <footer>
-          <Button>OK</Button>
+          <Button onClick={props.onBackDrop}>OK</Button>
         </footer>
       </StyledCard>
     </div>
