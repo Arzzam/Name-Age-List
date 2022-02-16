@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Name-Age-List/static/css/main.eb746c06.css",
+    "main.js": "/Name-Age-List/static/js/main.a1612791.js",
+    "index.html": "/Name-Age-List/index.html",
+    "main.eb746c06.css.map": "/Name-Age-List/static/css/main.eb746c06.css.map",
+    "main.a1612791.js.map": "/Name-Age-List/static/js/main.a1612791.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.eb746c06.css",
+    "static/js/main.a1612791.js"
+  ]
+}
