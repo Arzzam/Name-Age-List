@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Footer from "./Components/Footer/Footer";
 import AddUser from "./Components/UserInput/AddUser";
 import UserList from "./Components/UserInput/UserList";
 
@@ -18,6 +19,7 @@ function App() {
     <div>
       <AddUser onAddData={listHandler} />
       <UserList datas={usersList} />
+      <Footer />
     </div>
   );
 }
